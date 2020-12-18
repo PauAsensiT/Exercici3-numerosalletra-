@@ -11,17 +11,11 @@ public static Scanner teclado=new Scanner(System.in);
         System.out.println(tresDigitsEnLletres(i));
         
         }
-        
-        
-       
-        System.out.println("Dime:");
-        long numerodefinitiu=teclado.nextLong();
-        int numero=(int) numerodefinitiu;
-        int n_digits=contarNumeros(numero);
-
-        
+        int numero=0;
         do{
-        
+            long numerodefinitiu=demanarNumerollarc("Numero:");
+            numero=convertirLongAInt(numerodefinitiu);
+            int n_digits=contarNumeros(numero);
         if(n_digits<=3){
             String tresNumeros=tresDigitsEnLletres(numero);
             System.out.println(tresNumeros);
@@ -35,11 +29,35 @@ public static Scanner teclado=new Scanner(System.in);
             System.out.println(moltNumeros);
 
             }
-        }while(numerodefinitiu!=0);
+        }while(numero!=0);
+        
+        
+        
+       
+        
+        
+   
+        
+        
+        
+        
+        
     }
     
   
+public static long demanarNumerollarc(String mensaje){
+    System.out.println(mensaje);
+    return teclado.nextLong();
 
+}
+
+public static int convertirLongAInt(long numero){
+
+int numeroc =(int)numero;
+return numeroc;
+
+
+}
 public static int digitUnitats(int q){
         return q%10;
     }
