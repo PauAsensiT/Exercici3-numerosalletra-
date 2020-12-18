@@ -2,7 +2,7 @@ package numerosalletra;
 import java.util.*;
 
 
-public class NumerosALletra {
+public class NumerosALletraPauAsensi {
 public static Scanner teclado=new Scanner(System.in);
    
     public static void main(String[] args) {
